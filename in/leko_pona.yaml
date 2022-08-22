@@ -14,7 +14,7 @@ points:
           spread: cx
           rows:
             home:
-              bind: [10, 19, 30, 2]
+              bind: [8, 19, 30, 2]
       rows:
         bottom:
         home:
@@ -52,7 +52,6 @@ points:
         params:
           reverse: true
           keycaps: true
-        
 outlines:
   exports:
     raw:
@@ -64,7 +63,7 @@ outlines:
         name: raw
         fillet: 2
 pcbs:
-  ilo_luka:
+  leko_pona:
     outlines:
       main:
         outline: panel
@@ -73,7 +72,7 @@ pcbs:
         type: pcm12
         anchor:
           ref: main_inner_bottom
-          shift: [26.5, -4]
+          shift: [25.5, -4]
           rotate: 90
         nets:
           from: pos
@@ -93,7 +92,7 @@ pcbs:
         type: via
         anchor:
           ref: main_inner_bottom
-          shift: [23.5, -4]
+          shift: [20, -2]
         nets:
           net: RAW
       controller:
