@@ -1,0 +1,124 @@
+# leko pona, designed by CrispyPin
+points:
+  zones:
+    main:
+      columns:
+        pinky:
+        ring:
+          spread: cx
+        middle:
+          spread: cx
+        index:
+          spread: cx
+        inner:
+          spread: cx
+          rows:
+            home:
+              bind: [10, 19, 30, 2]
+      rows:
+        bottom:
+        home:
+        top:
+    thumb:
+      anchor:
+        ref: main_index_bottom
+        shift: [0, -1cy]
+      columns:
+        tucky:
+        middle:
+          spread: cx
+        reachy:
+          spread: cx
+  key:
+    bind: 1
+    padding: cy
+    footprints:
+      hotswap:
+        type: choc
+        nets:
+          from: =name
+          to: GND
+        params:
+          reverse: true
+          hotswap: true
+          keycaps: true
+      choc:
+        type: choc
+        anchor:
+          rotate: 180
+        nets:
+          from: =name
+          to: GND
+        params:
+          reverse: true
+          keycaps: true
+        
+outlines:
+  exports:
+    raw:
+      - type: keys
+        side: left
+        size: U
+    panel:
+      - type: outline
+        name: raw
+        fillet: 2
+pcbs:
+  ilo_luka:
+    outlines:
+      main:
+        outline: panel
+    footprints:
+      power_switch:
+        type: pcm12
+        anchor:
+          ref: main_inner_bottom
+          shift: [26.5, -4]
+          rotate: 90
+        nets:
+          from: pos
+          to: RAW
+        params:
+          reverse: true
+      battery:
+        type: jstph_flip
+        anchor:
+          ref: main_inner_bottom
+          shift: [20, -6]
+          rotate: 180
+        nets:
+          pos: pos
+          neg: GND
+      via0:
+        type: via
+        anchor:
+          ref: main_inner_bottom
+          shift: [23.5, -4]
+        nets:
+          net: RAW
+      controller:
+        type: promicro_pretty
+        anchor:
+          - ref: main_inner_home
+            shift: [19, 0]
+            rotate: -90
+        nets:
+          P9: thumb_reachy_default
+          P8: thumb_middle_default
+          P7: thumb_tucky_default
+          P6: main_inner_bottom
+          P5: main_index_bottom
+          P4: main_middle_bottom
+          P3: main_ring_bottom
+          P2: main_pinky_bottom
+          P10: main_inner_home
+          P16: main_index_home
+          P14: main_middle_home
+          P15: main_ring_home
+          P18: main_pinky_home
+          P19: main_inner_top
+          P20: main_index_top
+          P21: main_middle_top
+          P0: main_ring_top
+          P1: main_pinky_top
+
