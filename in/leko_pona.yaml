@@ -105,19 +105,22 @@ pcbs:
           P9: thumb_reachy_default
           P8: thumb_middle_default
           P7: thumb_tucky_default
+          
           P6: main_inner_bottom
           P5: main_index_bottom
           P4: main_middle_bottom
           P3: main_ring_bottom
           P2: main_pinky_bottom
-          P10: main_inner_home
-          P16: main_index_home
+          
+          P10: main_pinky_home
+          P16: main_ring_home
           P14: main_middle_home
-          P15: main_ring_home
-          P18: main_pinky_home
-          P19: main_inner_top
-          P20: main_index_top
+          P15: main_index_home
+          P18: main_inner_home
+
+          P19: main_pinky_top
+          P20: main_ring_top
           P21: main_middle_top
-          P0: main_ring_top
-          P1: main_pinky_top
+          P0: main_index_top
+          P1: main_inner_top
 
